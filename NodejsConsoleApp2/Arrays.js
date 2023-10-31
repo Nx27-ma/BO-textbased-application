@@ -1,4 +1,4 @@
-class girl {
+class Ascii {
 
     static imgCollection = [[
         "......................................../MMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\\\...........",
@@ -35,4 +35,4 @@ class girl {
 }
 
 
-module.exports = girl;
+module.exports = Ascii;

@@ -17,14 +17,14 @@ function SwitchFunctie() {
                 if (this.primedArrows == 4) {
                     this.primedArrows = 1;
                 }
-                render(imgIndex);
-                    break;
+                render(Images.imgCollection);
+                    break;  
             case "s":
                 this.primedArrows--;
                 if (this.primedArrows == 0) {
                     this.primedArrows = 3;
                 }
-                render(imgIndex);
+                render(Images.imgCollection);
                 break;
             case " ":
                 Arrows = this.primedArrows;
