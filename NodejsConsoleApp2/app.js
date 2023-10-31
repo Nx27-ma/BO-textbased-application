@@ -2,7 +2,7 @@ var Images = require('./Arrays.js'),
     read = require('readline-sync'),
     GameLoop = true,
     Arrows = 1,
-    imgIndex = 1;
+    imgIndex = 0;
 
                                                     //camelcase warcrimes were commited here so leave if u cant handle it
 console.clear();
@@ -14,7 +14,7 @@ function SwitchFunctie() {
         switch (HahaSwitch) {
             case "w":
                 this.primedArrows++;
-                if (this.primedArrows == 4) {
+                if (this.primedArrows == 3) {
                     this.primedArrows = 1;
                 }
                 render(Images.imgCollection);
@@ -22,7 +22,7 @@ function SwitchFunctie() {
             case "s":
                 this.primedArrows--;
                 if (this.primedArrows == 0) {
-                    this.primedArrows = 3;
+                    this.primedArrows = 2;
                 }
                 render(Images.imgCollection);
                 break;
@@ -38,7 +38,7 @@ function SwitchFunctie() {
 
 class ChoicesInModule { //"I" means its unimportant for the story
     static Choice1() {      //If u take a drink or  not (
-        imgIndex = 1;
+        imgIndex = 0;
         SwitchFunctie();
         this.Choice2();
     }
@@ -274,21 +274,17 @@ class ChoicesInModule { //"I" means its unimportant for the story
 
 function render(WhichOptionToRender) {
     for (let i = 0; i < WhichOptionToRender[imgIndex].length; i++) {
+        let Rendered = WhichOptionToRender[imgIndex];
         if (primedArrows == 1) {
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '---->');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '.....');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '.....');
+            Rendered[i] = Rendered[i].replace('~~~~~', '---->');
+            Rendered[i] = Rendered[i].replace('#####', '.....');
         } else if (primedArrows == 2) {
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '---->');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '.....');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '.....');
-        } else if (primedArrows == 3) {
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '---->');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '.....');
-            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '.....');
-        }
-        
+            Rendered[i] = Rendered[i].replace('#####', '---->');
+            Rendered[i] = Rendered[i].replace('~~~~~', '.....');
+        } 
+        console.log(Rendered[i]);
     }
+
 
     
 }
