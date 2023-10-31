@@ -6,28 +6,31 @@ var Images = require('./Arrays.js'),
 
                                                     //camelcase warcrimes were commited here so leave if u cant handle it
 console.clear();
+
 function SwitchFunctie() {
-    primedArrows = 1;
+    primedArrows = 2;
     Arrows = 50;
     while (Arrows == 50) {
         HahaSwitch = read.keyIn().toLowerCase();
         switch (HahaSwitch) {
             case "w":
-                this.primedArrows++;
-                if (this.primedArrows == 3) {
-                    this.primedArrows = 1;
+                primedArrows++;
+                if (primedArrows == 3) {
+                    primedArrows = 1;
                 }
+                console.clear();
                 render(Images.imgCollection);
                     break;  
             case "s":
-                this.primedArrows--;
-                if (this.primedArrows == 0) {
-                    this.primedArrows = 2;
+                primedArrows--;
+                if (primedArrows == 0) {
+                    primedArrows = 2;
                 }
+                console.clear();
                 render(Images.imgCollection);
                 break;
             case " ":
-                Arrows = this.primedArrows;
+                Arrows = primedArrows;
                 return Arrows;
                 break;
             default:
@@ -56,8 +59,8 @@ class ChoicesInModule { //"I" means its unimportant for the story
             this.Choice5();
         } else {
             console.log("Oi ya did something wrong")
-
         }
+        Arrows = 50;
     }
     static Choice4() {      //She lies to you (She doesnt want to get caught/explain)
         imgIndex = 4;
@@ -274,7 +277,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
 
 function render(WhichOptionToRender) {
     for (let i = 0; i < WhichOptionToRender[imgIndex].length; i++) {
-        let Rendered = WhichOptionToRender[imgIndex];
+        let Rendered = Array.from(WhichOptionToRender[imgIndex]);
         if (primedArrows == 1) {
             Rendered[i] = Rendered[i].replace('~~~~~', '---->');
             Rendered[i] = Rendered[i].replace('#####', '.....');
@@ -283,10 +286,7 @@ function render(WhichOptionToRender) {
             Rendered[i] = Rendered[i].replace('~~~~~', '.....');
         } 
         console.log(Rendered[i]);
-    }
-
-
-    
+    }  
 }
 
 var Choises = new ChoicesInModule();
