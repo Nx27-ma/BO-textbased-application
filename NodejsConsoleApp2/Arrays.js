@@ -1,7 +1,6 @@
 class girl {
 
-    static img1 = "1image";
-    static img2 = [
+    static imgCollection = [[
         "......................................../MMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\\\...........",
         "........................................lMMMMMMMMMMMMMMMMMMMMMMMV-~```\\MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI...........",
         ".......................................lMMMMMMMMMMMMMMMMMW-`` ,,---,  lMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI............ ",
@@ -31,7 +30,7 @@ class girl {
         ".................................................................SP`    K   /`   L,                           JH.......",
         "................................................................TP      J  /     W,                            YU......",
         "...............................................................JT      //        M;                            MW......",
-        "...............................................................I     ?`         WM                            W........"];
+        "...............................................................I     ?`         WM                            W........"]];
 
 }
 

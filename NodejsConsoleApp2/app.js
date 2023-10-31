@@ -1,11 +1,11 @@
 var Images = require('./Arrays.js'),
     read = require('readline-sync'),
     GameLoop = true,
-    Arrows = 1;
+    Arrows = 1,
+    imgIndex = 1;
 
+                                                    //camelcase warcrimes were commited here so leave if u cant handle it
 console.clear();
-
-console.log(SwitchFunctie());
 function SwitchFunctie() {
     primedArrows = 1;
     Arrows = 50;
@@ -17,14 +17,14 @@ function SwitchFunctie() {
                 if (this.primedArrows == 4) {
                     this.primedArrows = 1;
                 }
-                console.log(this.primedArrows);
+                render(imgIndex);
                     break;
             case "s":
                 this.primedArrows--;
                 if (this.primedArrows == 0) {
                     this.primedArrows = 3;
                 }
-                console.log(this.primedArrows);
+                render(imgIndex);
                 break;
             case " ":
                 Arrows = this.primedArrows;
@@ -37,20 +37,19 @@ function SwitchFunctie() {
 }
 
 class ChoicesInModule { //"I" means its unimportant for the story
-    imgIndex = 0;
     static Choice1() {      //If u take a drink or  not (
         imgIndex = 1;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         this.Choice2();
     }
     static Choice2() {      //If you ignore the woman or not (I)
         imgIndex = 2;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         this.Choice3();
     }
     static Choice3() {      //Do you know this guy?
         imgIndex = 3;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -62,7 +61,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     static Choice4() {      //She lies to you (She doesnt want to get caught/explain)
         imgIndex = 4;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice6();
         } else if (Arrows == 2) {
@@ -73,7 +72,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     static Choice5() {      //She knows u lied to her
         imgIndex = 5;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.ScaredEnd();       //add
         } else if (Arrows == 2) {
@@ -84,7 +83,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     static Choice6() {      //She explains why she needs help
         imgIndex = 6;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -96,12 +95,12 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     static Choice7() {      //A strange man approaches you
         imgIndex = 7;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         this.QuickEnd(); //ANOTHER ENDING THAT I MUSNT FORGET
     }
     static Choice8() {
         imgIndex = 8;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -113,7 +112,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     static Choice9() {
         imgIndex = 9;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -129,7 +128,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice11() {
         imgIndex = 11;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -141,7 +140,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice12() {
         imgIndex = 12;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -153,7 +152,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice13() {
         imgIndex = 13;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -165,7 +164,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice14() {
         imgIndex = 14;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -177,7 +176,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice15() {
         imgIndex = 15;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -189,7 +188,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice16() {
         imgIndex = 16;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -201,7 +200,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice17() {
         imgIndex = 17;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -213,7 +212,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice18() {
         imgIndex = 18;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -225,7 +224,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice19() {
         imgIndex = 19;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -237,7 +236,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice20() {
         imgIndex = 20;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -249,7 +248,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice21() {
         imgIndex = 21;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -261,7 +260,7 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
     Choice22() {
         imgIndex = 22;
-        Arrows = InputR.actualInput();
+        SwitchFunctie();
         if (Arrows == 1) {
             this.Choice4();
         } else if (Arrows == 2) {
@@ -273,44 +272,29 @@ class ChoicesInModule { //"I" means its unimportant for the story
     }
 }
 
-class Renderer {
-    constructor(WhichOptionToRender) {
-        this.WhichOptionToRender = WhichOptionToRender;
-
-    }
-
-    ScrollThrough() {
-
-        for (let i = 0; i < this.WhichOptionToRender.length; i++) {
-            if (Arrows == 1) {
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('~~~~~', '---->');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('#####', '.....');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('&&&&&', '.....');
-            } else if (Arrows == 2) {
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('#####', '---->');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('~~~~~', '.....');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('&&&&&', '.....');
-            } else if (Arrows == 3) {
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('&&&&&', '---->');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('~~~~~', '.....');
-                this.WhichOptionToRender[i] = this.WhichOptionToRender[i].replace('#####', '.....');
-            }
-            console.log(this.WhichOptionToRender[i]);
+function render(WhichOptionToRender) {
+    for (let i = 0; i < WhichOptionToRender[imgIndex].length; i++) {
+        if (primedArrows == 1) {
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '---->');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '.....');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '.....');
+        } else if (primedArrows == 2) {
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '---->');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '.....');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '.....');
+        } else if (primedArrows == 3) {
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('&&&&&', '---->');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('~~~~~', '.....');
+            WhichOptionToRender[imgIndex][i] = WhichOptionToRender[imgIndex][i].replace('#####', '.....');
         }
+        
     }
 
+    
 }
 
-
-
-
-//while (GameLoop == true) {
-
-//}
-
-
-//const girlprint = new Renderer(Images.Choice2);
-//girlprint.ScrollThrough();
+var Choises = new ChoicesInModule();
+ChoicesInModule.Choice1();
 
 read.question();
 
