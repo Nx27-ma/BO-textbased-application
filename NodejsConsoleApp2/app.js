@@ -1,4 +1,4 @@
-var Images = require('./Arrays.js'),
+var Stored = require('./Arrays.js'),
     read = require('readline-sync'),
     GameLoop = true,
     Arrows = 1,
@@ -11,7 +11,8 @@ function SwitchFunctie() {
     primedArrows = 2;
     Arrows = 50;
     while (Arrows == 50) {
-        HahaSwitch = read.keyIn().toLowerCase();
+        HahaSwitch = read.keyIn("", {
+            hideEchoBack: true, mask: "" }).toLowerCase();
         switch (HahaSwitch) {
             case "w":
                 primedArrows++;
@@ -19,7 +20,7 @@ function SwitchFunctie() {
                     primedArrows = 1;
                 }
                 console.clear();
-                render(Images.imgCollection);
+                render(Stored.Collection);
                     break;  
             case "s":
                 primedArrows--;
@@ -27,7 +28,7 @@ function SwitchFunctie() {
                     primedArrows = 2;
                 }
                 console.clear();
-                render(Images.imgCollection);
+                render(Stored.Collection);
                 break;
             case " ":
                 Arrows = primedArrows;
@@ -41,7 +42,7 @@ function SwitchFunctie() {
 
 class ChoicesInModule { //"I" means its unimportant for the story
     static Choice1() {      //If u take a drink or  not (
-        imgIndex = 0;
+        imgIndex = 5;
         SwitchFunctie();
         this.Choice2();
     }
@@ -279,10 +280,10 @@ function render(WhichOptionToRender) {
     for (let i = 0; i < WhichOptionToRender[imgIndex].length; i++) {
         let Rendered = Array.from(WhichOptionToRender[imgIndex]);
         if (primedArrows == 1) {
-            Rendered[i] = Rendered[i].replace('~~~~~', '---->');
+            Rendered[i] = Rendered[i].replace('~~~~~', '>>>>>');
             Rendered[i] = Rendered[i].replace('#####', '.....');
         } else if (primedArrows == 2) {
-            Rendered[i] = Rendered[i].replace('#####', '---->');
+            Rendered[i] = Rendered[i].replace('#####', '>>>>>');
             Rendered[i] = Rendered[i].replace('~~~~~', '.....');
         } 
         console.log(Rendered[i]);
