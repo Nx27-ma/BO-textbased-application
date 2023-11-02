@@ -1,288 +1,171 @@
 var Stored = require('./Arrays.js'),
     read = require('readline-sync'),
-    GameLoop = true,
     Arrows = 1,
-    imgIndex = 0;
+    imgIndex = 0,
+    primedArrows = 2;
 
                                                     //camelcase warcrimes were commited here so leave if u cant handle it
+
+var images = {
+    beginscherm : 3,
+    startgame : 4,
+}
+const eerstekeuze = 1;
+
 console.clear();
 
+
+Start();
+
+read.question();
+
 function SwitchFunctie() {
-    primedArrows = 2;
-    Arrows = 50;
-    while (Arrows == 50) {
-        HahaSwitch = read.keyIn("", {
-            hideEchoBack: true, mask: "" }).toLowerCase();
-        switch (HahaSwitch) {
+    render(imgIndex, true);
+    let loop = true;
+    while (loop) {
+        let inputChar = read.keyIn("", { hideEchoBack: true, mask: "" }).toLowerCase();
+        switch (inputChar) {
             case "w":
-                primedArrows++;
-                if (primedArrows == 3) {
-                    primedArrows = 1;
+                Arrows++;
+                if (Arrows == 3) {
+                    Arrows = 1;
                 }
-                console.clear();
-                render(Stored.Collection);
-                    break;  
+                render(imgIndex, Arrows == 1);  //stored collection is everything in Arrays.js
+                break;  
             case "s":
-                primedArrows--;
-                if (primedArrows == 0) {
-                    primedArrows = 2;
+                Arrows--;
+                if (Arrows == 0) {
+                    Arrows = 2;
                 }
-                console.clear();
-                render(Stored.Collection);
+                render(imgIndex, Arrows == 1);
                 break;
             case " ":
-                Arrows = primedArrows;
+                loop = false;
                 return Arrows;
                 break;
             default:
-                console.log("NO THATS NOT RIGHT HOW");
+                console.log("W or S");
         }
+        
+    }
+    console.log("end of while");
+}
+//imgIndex = 3;
+//SwitchFunctie();
+//if (Arrows == 1) {
+//} else if (Arrows == 2) { }
+
+function Start() {
+    imgIndex = images.beginscherm;
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        StartGame();
+    } else  {
+        process.exit();
+    }
+}
+function StartGame() {              //1ste choice
+    imgIndex = images.startgame; 
+    const result = SwitchFunctie();
+    imgIndex = 5;
+    SwitchFunctie();
+    WomanEncounter();
+}
+function WomanEncounter() {         //2nd choice
+    imgIndex = 6;
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        TalkAnyway();
+    } else  {
+        Talk();
+    }    
+}
+function Talk() {
+    imgIndex = 8;
+    SwitchFunctie();
+    TruthOrLie1();
+}
+
+function TalkAnyway() {
+    imgIndex = 7;
+    SwitchFunctie();
+    TruthOrLie1();
+}
+
+function TruthOrLie1() {
+    imgIndex = 9;
+    SwitchFunctie();
+    imgIndex = 10;
+    SwitchFunctie();
+    imgIndex = 11;
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        Lie();
+    } else  {
+        SheLies();
     }
 }
 
-class ChoicesInModule { //"I" means its unimportant for the story
-    static Choice1() {      //If u take a drink or  not (
-        imgIndex = 5;
-        SwitchFunctie();
-        this.Choice2();
-    }
-    static Choice2() {      //If you ignore the woman or not (I)
-        imgIndex = 2;
-        SwitchFunctie();
-        this.Choice3();
-    }
-    static Choice3() {      //Do you know this guy?
-        imgIndex = 3;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-        }
-        Arrows = 50;
-    }
-    static Choice4() {      //She lies to you (She doesnt want to get caught/explain)
-        imgIndex = 4;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice6();
-        } else if (Arrows == 2) {
-            this.Choice7();
-        } else {
-            console.log("Oi ya did something wrong")
-        }
-    }
-    static Choice5() {      //She knows u lied to her
-        imgIndex = 5;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.ScaredEnd();       //add
-        } else if (Arrows == 2) {
-            this.Choice6();
-        } else {
-            console.log("Oi ya did something wrong")
-        }
-    }
-    static Choice6() {      //She explains why she needs help
-        imgIndex = 6;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
+function Lie() {
 
-        }
-    }
-    static Choice7() {      //A strange man approaches you
-        imgIndex = 7;
-        SwitchFunctie();
-        this.QuickEnd(); //ANOTHER ENDING THAT I MUSNT FORGET
-    }
-    static Choice8() {
-        imgIndex = 8;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
+    imgIndex = 12
+    SwitchFunctie();
+    imgIndex = 13
 
-        }
-    }
-    static Choice9() {
-        imgIndex = 9;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice10() {
-        imgIndex = 10;
-        this.NoThankYouEnd(); //DONT FORGET
-    }
-    Choice11() {
-        imgIndex = 11;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice12() {
-        imgIndex = 12;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice13() {
-        imgIndex = 13;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice14() {
-        imgIndex = 14;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice15() {
-        imgIndex = 15;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice16() {
-        imgIndex = 16;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice17() {
-        imgIndex = 17;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice18() {
-        imgIndex = 18;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice19() {
-        imgIndex = 19;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice20() {
-        imgIndex = 20;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice21() {
-        imgIndex = 21;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
-    }
-    Choice22() {
-        imgIndex = 22;
-        SwitchFunctie();
-        if (Arrows == 1) {
-            this.Choice4();
-        } else if (Arrows == 2) {
-            this.Choice5();
-        } else {
-            console.log("Oi ya did something wrong")
-
-        }
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        LieMore();
+    } else  {
+        Apologize();
     }
 }
 
-function render(WhichOptionToRender) {
-    for (let i = 0; i < WhichOptionToRender[imgIndex].length; i++) {
-        let Rendered = Array.from(WhichOptionToRender[imgIndex]);
-        if (primedArrows == 1) {
+function SheLies() {
+    imgIndex = 17;
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        GoingHome(); //undefined
+    } else  {
+        Explained();
+    }
+}
+function GoingHome() { }
+function Explained() {
+    imgIndex = 18;
+    SwitchFunctie();
+    //left off here
+}
+
+function LieMore() {                        //ENDING
+    imgIndex = 14;
+
+    SwitchFunctie();
+}
+
+function Apologize() {
+    imgIndex = 15;
+
+    SwitchFunctie();
+    imgIndex = 16;
+
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        //help
+    } else if (Arrows == 2) {
+        //dont help/wait for logan
+    }
+}
+function render(imageIndex, renderUp) {
+    imgIndex = imageIndex;
+    console.clear();
+    console.log(imageIndex);
+
+    for (let i = 0; i < Stored.Collection[imgIndex].length; i++) {
+        let Rendered = Array.from(Stored.Collection[imgIndex]);
+        if (renderUp) {
             Rendered[i] = Rendered[i].replace('~~~~~', '>>>>>');
             Rendered[i] = Rendered[i].replace('#####', '.....');
-        } else if (primedArrows == 2) {
+        } else {
             Rendered[i] = Rendered[i].replace('#####', '>>>>>');
             Rendered[i] = Rendered[i].replace('~~~~~', '.....');
         } 
@@ -290,8 +173,5 @@ function render(WhichOptionToRender) {
     }  
 }
 
-var Choises = new ChoicesInModule();
-ChoicesInModule.Choice1();
 
-read.question();
 
