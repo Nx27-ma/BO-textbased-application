@@ -56,7 +56,7 @@ function SwitchFunctie() {
 //} else if (Arrows == 2) { }
 
 function Start() {
-    imgIndex = 22/*images.beginscherm*/;
+    imgIndex = 29/*images.beginscherm*/;
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
         StartGame();
