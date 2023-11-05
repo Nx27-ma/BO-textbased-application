@@ -789,8 +789,88 @@ class Ascii {
         //46 She doesnt know either
         ["\"I don't know why he showed up here either\", she answered, \"it's probably just bad luck\""],
 
+        //47 Woman just goes for it
+        ["The man just doesn't leave",
+            "You wait and wait and wait",
+            "The woman gets impatient and tries to leave",
+            "The man sees her and immediately shouts at her: \"Hey Kristel get over here\"",
+            "",
+            "You haven't heard someone shout that angrily in a while",
+            "",
+            "The woman instantly replies with: \"No get away from me you creep\"",
+            "",
+            "The bartender suddenly interferes: \"Sir could you please leave this lady alone?\"",
+            "The man snaps and trows a bottle to the bartenders head",
+            "The fight is on; the whole bar is now angry at this man"],
+            //48 Punch the man?
+        [".....................................>MWMWMWMWMMWMWMWMWMWMWMWMWMWMMWWMMWMWMWMWMWMWMWMWMWMWMWMWMMWMWMWMWMb...............",
+        "...................................MWMWMWMWMMWMWMWMWMWMMWMWM*\"      \"*VMWMMWMWMMMWMWMWMWMWMWMMWMWMWMWMMWM^\\.............",
+        "..................................ZMWMWMWMWMWMWMWMWMWMP**\"              \"*QMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM.\\,...........",
+        ".................................ZMWMWMWMWMWWMMP*                           \"MWMWMWMWMWMWMWMWMWWMWMWMWMWMWB.*...........",
+        ".................................QMWMWMWMWMWMWP                               QMMWMWMWMWMWMWMWMWMWMWMWMMMWB.............",
+        ".................................MWMWMWMWMWMW?                                 \"QMWMWMWMWMWMWMWMWMWMWMWMWW..............",
+        ".................................QMWMWMWMWMWG\'                                   \"QMWMWMWMWMWMWMWMWMWMMWMW..............",
+        "..................................QWMWMWMMWWP                                _,_    \"SMWMWMWMMWMWMWMWMMWM|..............",
+        "..................................|MWMWMWMWMT                        _,,yyyMMMWMMyy,   QMWMWMWMWMWMWMWMWMM..............",
+        "..................................\\MWMWMWMWM;  ,___                /MMWMWP**\"\"      \"   QWMWMWMWMWMWMMWMWMW\\,...........",
+        "....................................MWMWMWMWb dMWMWMWMWMWb        *MWP*j=DDD=)>,        QMWMWMWMWMWMWMWMWMWMB,..........",
+        "....................................Y*MWMWMWbP*\',zDDD=-,_           ,R-=***\"\"            QMWMWMWMWMWMWWMWMWMWM/.........",
+        "......................................MWMWMWM  dDY*DD*--\"                                 \"QMWMWMWMWMWMWMWMMWMB.........",
+        "......................................YMWMWMWb                                              MWMWMWMWMWMWMWMWWM=-........",
+        ".......................................(MWMWMM             /                               MWMW  WMWMW^MWMW**^..........",
+        ".........................................QMWMM             |      __                        MMWM  ZMWMW   MWP*..........",
+        "...........................................QMM|            |     /                          MMWP ZMWMP   MWMWb..........",
+        ".............................................QJ                                           ,vvvvv\"*\"    JMWMWL...........",
+        "..............................................Q                  v,                      vvvvvvv       JWMWL\\...........",
+        "........~~~~~Punch.the.man.....................Q            vvvvvvvvvvv               ,vvvvvvvv,      JMMWMWL...........",
+        "................................................ v         vvvv-__-==-vvvvvv        vvvvvvvvvvv MVMVMVMVMML.............",
+        "................................................ vvv    ,vvv,DDDDDDDDDDDDD\' v     vvvvvvvvvvvv, |MWMWMWMWLLL............",
+        "...........#####Don't.interfere..................vvvvv  vv,DDDDDDDDDDDDDD\'  vv  vvvvvvvvvvvvvv  |MWMWMWMWMWLL...........",
+        ".................................................vvvvvv, v  \'DDDDDDDDD\'     vvvvvvvvvvvvvvvvv   |WMMWMWMWMW=-...........",
+        "..................................................vvvvvvvv,                vvvvvvvvvvvvvvvvv    |WMWMWMWMMWL............",
+        "....................................................vvvvvvvv,           vvvvvvvvvvvvvvvvvv      |WMWMWMWMWM==-..........",
+        "......................................................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\"       |WMWMWMWMMWMWM=*........",
+        "....................................................../ vvvvvvvvvvvvvvvvvvvvvvvvvv              MMMMMMMMMMMMP...........",
+        "......................................................|     vvvvvvvvvvvvvvvvvv                  MWMWMWMWMWM.............",
+        "......................................................|           \"\"\"\"\"\"                         wMWMWMW--*............."
+
+        ],
+        //49 man behind bar
+        ["Your attempt on punching him failed miserably",
+            "The man dodges your punch and tries to hit you back",
+            "Tries because one of the other people at the bar also took a swing at him and didn't mis",
+            "The man is only more furious now",
+            "While still recovering from the punch he rolls over the bar",
+            "From there he starts trowing bottles at people",
+            "You:",
+            "~~~~~Try to get to the other side of the bar too",
+            "#####Duck behind the bar"],
+
+        //50 Other side
+        ["You jump swiftly over the bar",
+            "The man hits you with a bottle at full speed but you're so high on adrenaline that you don't even feel that",
+            "~~~~~Hit the man for real this time",
+            "#####Give him a taste of his own medicine"
+        ],
+
+        //51 the man is knocked down
+        ["You hit the man hard this time",
+            "He instantly collapses",
+            "He's still alive you can see him breathing",
+            "You notice only now that the woman had left to get the police",
+            "They just arrived and the man is taken into custody",
+            "\"Thanks for everything\", says the woman to you",
+            "\"I'm going home now though\"",
+            "You both say your goodbyes and leave the bar",
+            "",
+            "~The end"
+        ]
+
     ];
 }
+
+
+
 
 
 module.exports = Ascii;
