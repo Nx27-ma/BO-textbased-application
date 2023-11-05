@@ -864,7 +864,56 @@ class Ascii {
             "You both say your goodbyes and leave the bar",
             "",
             "~The end"
+        ],
+
+        //52 ducked behind bar
+        ["Quickly you duck behind the bar",
+            "As you look around you see the woman shout: \"Keep him busy i'll go get the police\"",
+            "With that in mind you patiently wait the man out",
+            "But the man has other plans and tries to run the second he heard her shout that",
+            "~~~~~~Tackle the man as he tries to run",
+            "#####Let him run he can't go far either way"
+        ],
+
+        //53 tackle the man
+        ["The man falls and lands with his neck in a glass shard",
+            "You stare baffled at the dead man",
+            "You didn't expect that second degree murder would ever appear on your criminal record",
+            "As you hear the sirens of the police you panick",
+            "But then you listen closely to the sound of the sirens",
+            "They sound... familiar",
+            "You wake up and realize that it was your alarm",
+            "\"Pfff that was one hectic dream\", you think to yourself", "\"I'm happy that it was though\"", "", "~The end?"],
+        //54 Let him run
+        ["As you hear the sirens of the police you see the man get arrested",
+            "But then you listen closely to the sound of the sirens",
+            "They sound... familiar",
+            "You wake up and realize that it was your alarm and that everything was just a dream...",
+            "",
+            "~The end"],
+        //55 Don't interfere
+        ["You quickly get off your barstool and try to go outside",
+            "But before you can get away you get hit by a flying bottle",
+            "Luckily you can catch your fall",
+            "You turn around and see the man now behind the bar trowing bottles at people",
+            "~~~~~Charge him",
+            "#####Try hiding behind a table"
+        ],
+        //56 table doesnt work at all
+        ["The table profides zero cover but you only realize that when you're already behind it",
+            "You need another plan",
+            "~~~~~Maybe charging him is the only option?",
+            "#####Or you can still try to make a run for the door",
+            "       It isn't that far anymore"
+        ],
+        //57 bottle to the head
+        ["Another bottle flies your way this time it hits your head",
+            "You grasp for air as you wake up in your bed",
+            "It was all a dream",
+            "",
+            "~The end"
         ]
+
 
     ];
 }
