@@ -633,7 +633,30 @@ class Ascii {
             "................._-/   (     *@@@@@@@@@@@@,            Y@@@@@@@@@vvs....................................................",
             "...........__,-=*^     \\,_\\_   *@@@@@@@@@@@@,,         Y@@@@@@@@@@@vv,..................................................",
             "....._,=+^^   *PPGGGj,__ \"*Bbcq    \"****=@@@@@@,        Y@@@@@@@@@@@bvc.................................................",
-            "pYp*\"  \"=,            ^*QHBXp,_*b,___ =,,__,_ *@b      J@@@@@@@@@@@@@@@\\................................................"]
+            "pYp*\"  \"=,            ^*QHBXp,_*b,___ =,,__,_ *@b      J@@@@@@@@@@@@@@@\\................................................"],
+        //32 follow kitty in bushes?
+        ["The cat doesn't respond at all to your calling",
+            "It runs after the bug and disappears in the bushes",
+            "",
+            "Do you follow it?",
+            "~~~~~Follow",
+            "#####Don't follow"
+        ],
+        //33 late en done so home
+        ["You decide to finish your walk through the park",
+            "Now that ur done walking you might as well go home you think to yourself",
+            "It's getting pretty late anyways"
+        ],
+        //34 HOME
+        ["Nobody is home except you",
+            "Lia's shift must be taking longer than expected",
+            "\"I'm going to bed, this day was weird\", you murmur to yourself",
+            "",
+            "Then you wake up and realize that all of this was just a dream and that ur late for work",
+            "",
+            "~The end"
+        ],
+
 
 
     ];
