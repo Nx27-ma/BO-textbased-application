@@ -6,11 +6,8 @@ var Stored = require('./Arrays.js'),
 
                                                     //camelcase warcrimes were commited here so leave if u cant handle it
 
-var images = {
-    beginscherm : 3,
-    startgame : 4,
-}
 const eerstekeuze = 1;
+
 
 console.clear();
 
@@ -50,13 +47,9 @@ function SwitchFunctie() {
     }
     console.log("end of while");
 }
-//imgIndex = 3;
-//SwitchFunctie();
-//if (Arrows == 1) {
-//} else if (Arrows == 2) { }
 
 function Start() {
-    imgIndex = 29/*images.beginscherm*/;
+    imgIndex = 3;
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
         StartGame();
@@ -64,14 +57,14 @@ function Start() {
         process.exit();
     }
 }
-function StartGame() {              //1ste choice
-    imgIndex = images.startgame; 
+function StartGame() {              
+    imgIndex = 4; 
     const result = SwitchFunctie();
     imgIndex = 5;
     SwitchFunctie();
     WomanEncounter();
 }
-function WomanEncounter() {         //2nd choice
+function WomanEncounter() {         
     imgIndex = 6;
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
@@ -124,54 +117,164 @@ function SheLies() {
     imgIndex = 17;
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
-        GoingHome(); //undefined
-    } else  {
         Explained();
+    } else  {
+        NoInfo();
     }
 }
-function GoingHome() { }
+
 function Explained() {
     imgIndex = 18;
     SwitchFunctie();
-    //left off here
-}
-
-function LieMore() {                        //ENDING
-    imgIndex = 14;
-
-    SwitchFunctie();
-}
-
-function Apologize() {
-    imgIndex = 15;
-
-    SwitchFunctie();
-    imgIndex = 16;
-
+    imgIndex = 16
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
-        //help
-    } else if (Arrows == 2) {
-        //dont help/wait for logan
+        Info()
+    } else {
+        Outside();
+    }
+
+    function Info() {
+        imgIndex = 19;
+        SwitchFunctie();
+        imgIndex = 20; 
+        SwitchFunctie();
+        imgIndex = 21;
+        SwitchFunctie();
+        if (result == eerstekeuze) {
+            YouWavedHimExtended();
+        } else {
+            ////////////////////////////
+        }
+    }
+    function YouWavedHimExtended() {
+        imgIndex = 22;
+        SwitchFunctie();
+        imgIndex = 45;
+        SwitchFunctie();
+        imgIndex = 26;
+        SwitchFunctie();
+        imgIndex = 46;
+        SwitchFunctie();
+        imgIndex = 27;
+        SwitchFunctie();
+        Outside()
+    }
+
+function NoInfo() {
+    imgIndex = 19;
+    SwitchFunctie();
+    imgIndex = 21; 
+    SwitchFunctie();
+    if (result == eerstekeuze) {
+        YouWavedHim();
+    } else {
+        ////////////////////////////
+    }
+
+
+function YouWavedHim() {
+    imgIndex = 22;
+    SwitchFunctie();
+    imgIndex = 23;
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        GetHerOut();
+    } else {
+        LetHerBe();
     }
 }
-function render(imageIndex, renderUp) {
-    imgIndex = imageIndex;
-    console.clear();
-    console.log(imageIndex);
-
-    for (let i = 0; i < Stored.Collection[imgIndex].length; i++) {
-        let Rendered = Array.from(Stored.Collection[imgIndex]);
-        if (renderUp) {
-            Rendered[i] = Rendered[i].replace('~~~~~', '>>>>>');
-            Rendered[i] = Rendered[i].replace('#####', '.....');
-        } else {
-            Rendered[i] = Rendered[i].replace('#####', '>>>>>');
-            Rendered[i] = Rendered[i].replace('~~~~~', '.....');
-        } 
-        console.log(Rendered[i]);
-    }  
+function GetHerOut(){
+    imgIndex = 26;
+    SwitchFunctie();
+    imgIndex = 18;
+    SwitchFunctie();
+    imgIndex = 27;
+    Outside();
 }
 
+function LetHerBe() {
+    imgIndex = 25
+    SwitchFunctie();
+    Outside();
+}
 
+function Outside() {
+    imgIndex = 28
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        ForAWalk();
+    } else {
+        Park();
+    }
 
+    function ForAWalk() {
+        imgIndex = 36;
+        SwitchFunctie();
+        imgIndex = 37;
+        SwitchFunctie();
+        const result = SwitchFunctie();
+        if (result == eerstekeuze) {
+            imgIndex = 39;
+            SwitchFunctie();                //end
+        } else {
+            HowToHelp();
+        }
+    }
+}
+
+    function HowToHelp() {
+        imgIndex = 40;
+        const result = SwitchFunctie();
+        if (result == eerstekeuze) {
+            imgIndex = 43;
+            SwitchFunctie();          //end
+        } else {
+            imgIndex = 41;
+            SwitchFunctie();
+            imgIndex = 42;             //end
+            SwitchFunctie();
+        }
+    }
+
+    function Park() {
+        imgIndex = 29;
+        SwitchFunctie();
+        imgIndex = 30;
+        SwitchFunctie();
+        imgIndex = 31;
+        const result = SwitchFunctie();
+        if (result == eerstekeuze) {
+            CatGone();
+        } else {
+            imgIndex = 44;
+            SwitchFunctie();            //end
+        }
+
+    }
+    function CatGone() {
+        imgIndex = 32;
+        SwitchFunctie();
+        imgIndex = 33;
+        SwitchFunctie();
+        imgIndex = 34;
+        SwitchFunctie();         //end
+
+    }
+    function render(imageIndex, renderUp) {
+        imgIndex = imageIndex;
+        console.clear();
+        console.log(imageIndex);
+
+        for (let i = 0; i < Stored.Collection[imgIndex].length; i++) {
+            let Rendered = Array.from(Stored.Collection[imgIndex]);
+            if (renderUp) {
+                Rendered[i] = Rendered[i].replace('~~~~~', '>>>>>');
+                Rendered[i] = Rendered[i].replace('#####', '.....');
+            } else {
+                Rendered[i] = Rendered[i].replace('#####', '>>>>>');
+                Rendered[i] = Rendered[i].replace('~~~~~', '.....');
+            }
+            console.log(Rendered[i]);
+        }
+    }

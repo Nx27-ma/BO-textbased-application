@@ -379,7 +379,7 @@ class Ascii {
             ".................................................bWWWWWWWPVMMMMMP,_,-~P`.....QMMMW``  V              TB,................",
             "..................................................\\\WWWWWWbdWWWW.``.............VMV     `     ________    \\\..............",
             "....................................................VMMMMJ.WWW*................V, ,     _==````           \\\.............",
-            "..................#####Wait.for.Logan................VMMMJ.....................JM/   _=``                   \\\...........",
+            "..................#####Go.outside....................VMMMJ.....................JM/   _=``                   \\\...........",
             "......................................................L.TL..............._===``WW   =                        L..........",
             "......................................................T..*...........=*`   _=`J;   I                          L.........",
             "...................................................................J`    /`  T/   J                           BB........",
@@ -393,7 +393,7 @@ class Ascii {
         ".......................................lMMMMMMMMMMMMMMMMMW-`` ,,---,  lMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI.............",
         "......\"Good\"...........................lMMMMMMMMMMMW-**``   //``       lMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI............",
         ".......\"You.think.you.can.help.me.......\\WMMMMMMMW`       /W/   ____   \\WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMl............",
-        "...........with.something?\".............RWWWWWW?*        O/  //=*````=-\\W\\`MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMML.............",
+        "...........with.something?\".............RWWWWWW?*        O/  //=*````=-\\W\\`MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMML............",
         "......................................./MWWWWW`___           =~`WMMMW/` [O LWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW.............",
         ".......................................lWWWWWWM VVVVjb      `Y ___j~`   \\W\\\WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWP.............",
         "......................................(WWMMMMMMMi,VTTCB      `**`         T WWWWWWWWWWWWWWWWWWWWWWWWWWWWWP..............",
@@ -432,7 +432,7 @@ class Ascii {
             "",
             "As you wait for her you see the man from the picture walks into the bar"],
     //20 guy dangerous must leave
-        ["He decides to sit next to you",
+        ["He walks to the bar and sits down",
             "You sigh as you wonder what to do now", "She cleary doesn't want to see him right now", "It might even be dangerous she said"
         ],
     //21 guy unknown 
@@ -500,7 +500,7 @@ class Ascii {
     //23 woman sees man
         ["Meanwhile you see the woman return",
             "The second she sees the man she hides",
-            "You're confused; wasn't she looking for him?",
+            "You're confused... Wasn't she looking for him?",
             "You look back at the man",
 "He clearly didn't see her yet"        ],
     //24 talk to unknown man
@@ -647,7 +647,7 @@ class Ascii {
             "Now that ur done walking you might as well go home you think to yourself",
             "It's getting pretty late anyways"
         ],
-        //34 HOME
+        //34 HOME                               //an ending
         ["Nobody is home except you",
             "Lia's shift must be taking longer than expected",
             "\"I'm going to bed, this day was weird\", you murmur to yourself",
@@ -656,8 +656,138 @@ class Ascii {
             "",
             "~The end"
         ],
+        //35 kitty comes back to you        //an ending
+        ["You go after the kitty",
+            "You can't find it so you sit down on the closest bench",
+            "Suddenly the kitty comes out of the bushes and walks purring to you",
+            "It jumps on your lap and lies down",
+            "As you pet the purring kitty you fall asleep",
+            "Happy and smiling you wake up",
+            "It was a confusing but nice dream",
+            "Sadly life must go on",
+            "",
+            "~The end"
+        ],
+        //36 Going for a walk
+        ["You walk",
+            "You don't really have a idea as to where to",
+            "It might be an idea to visit Logan and see what's up",
+            "As the thought popped up in your head you decide to change your course towards Logans appartment",
+        ],
+        //37 Logans appartment
+        ["You were going to knock on the door of Logans apprartment but you see that the door is open",
+            "Well this isn't unsettling you think to yourself",
+        ],
+        //38 Go inside?
+        ["......................................... _________.....................................................................",
+            ".......................................CMMMMMMMMMMMMMmmmmp==-,..........................................................",
+            "....................................dMMMMMMMMMMMMMMMMMMMMMMMMMMMb=---...................................................",
+            "...You.think.about.going......b.MWMWMWMWMWMWMWMMWMWMWMWMWMWMWMWMWMWMMWMb,-................~~~~~Go.inside................",
+            "......inside.................\\IMWMWMWMWMMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMB-//.........................................",
+            "............................b\\MMMMMWMWMMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWPZP=P........................................",
+            ".............................QMMMMMMMMMWMMWMWMWMWMWMMWMWMMWMWMMWMWMWPQMb=---=*............#####Stay.outside.............",
+            ".............................MWMWMWMWMWMWMWMMWMWMWMWMWMWMWW*\\   **+=Ub,.................................................",
+            "............................dMMMMMMMWMWMMWMWMWMWMWMWMWMMWW*            \\................................................",
+            "........................../JMWMWMWMMWMWMWMWMWMWMWMWMMWMWP               \\...............................................",
+            "...........................XMWMWMMWMWMWMWMWMWMWMWMMWWP*/                 |..............................................",
+            "...........................MWMWMWMWMWMWMWMWMWMWMWMWP                     |..............................................",
+            "............................WMWMWMMWMWMP*_+pWWWWW-bbjjp=--,,,            \\..............................................",
+            ".............................WWMWMWMMW /* ^| **+BMWMWP==========BBMMMMMWbJ._-p=_........................................",
+            ".............................WMMWMWMWP     |                     \\WMWMMWMWMWMMWP........................................",
+            "..............................WMWMMWMb   /*_                     ZWMWMMWW*WMWMW.........................................",
+            "..............................WMWMWMMMb  {_ \\                    MWMWMWP  TMMW..........................................",
+            "............................___WMWMWMWMb  *--                    YMWMY*    TF...........................................",
+            ".........................,/*’@@@@WMMWMWMWBb,  ,                      T =-o,_)...........................................",
+            "....................../* @@@@* @@WWWMWMWMMWP*                           /...............................................",
+            ".....................|  @@@*@@@@@@WM*  -*    ,                          )...............................................",
+            ".....................|  *@*@@@@@@@@b          \\,                  *^^RQ/................................................",
+            ".....................\\   @@@@@@@@@@@\          ^*u,_               *-^,,)................................................",
+            "...................../\\,  @@@@@@@@@@@@,           *^^b,__           **/.................................................",
+            "..................../ }|   @@@@@@@@@@@@b                 ^^=,        |..................................................",
+            "....................} \"|/   q@@@@@@@@@@@b              =-_-wwbp,_   /...................................................",
+            "................._-/   (     *@@@@@@@@@@@@,            Y@@@@@@@@@vvs....................................................",
+            "...........__,-=*^     \\,_\\_   *@@@@@@@@@@@@,,         Y@@@@@@@@@@@vv,..................................................",
+            "....._,=+^^   *PPGGGj,__ \"*Bbcq    \"****=@@@@@@,        Y@@@@@@@@@@@bvc.................................................",
+            "pYp*\"  \"=,            ^*QHBXp,_*b,___ =,,__,_ *@b      J@@@@@@@@@@@@@@@\\................................................"],
 
+            //39 inside
+        ["You enter but the second that you're inside the house you get knocked in the head by something hard",
+            "That's when you wake up by a beeping alarm",
+            "Still sleep drunk you wonder who hit you in the head",
+            "That's when you realize it was all a dream",
+            "",
+            "~The end"
+        ],
+        //40 how to help (Logan)
+        ["You don't think going inside might be smart",
+            "Maybe you can lend a firearm from the neighbours or call someone",
+            "",
+            "~~~~~Neighbours firearm",
+            "#####Call someone"
+        ],
+        //41 who to call
+        ["The police might be smart to call or no wait where IS Logan",
+            "",
+            "~~~~~Call Logan",
+            "#####Call police"],
 
+        //42 funny phone 
+        ["The sound of your telephone ringing doesn't sound like it's supposed to",
+            "It does sound familiar",
+            "You realize it's your alarm ringing as you slowly wake up from the dream",
+            "\"Goddamnit, I'm still way too tired for work today\"",
+            "You turn around as you decide to skip work today",
+            "",
+            "~The end"
+        ],
+        //43 funny doorbell
+        ["You walk to the next door wondering what the Smiths will think of you when you ask for their firearm",
+            "You ring the doorbell",
+            "It sounds kinda strange...",
+            "You realize it's your alarm ringing as you slowly wake up from the dream",
+            "You sigh as you prepare yourself to get out of bed",
+            "",
+            "~The end"
+        ],
+        //44 kitty end?
+        ["The kitty doesn't notice you",
+            "You slowly walk even closer", "The kitty sees you and comes towards you", "It lets you pet it", "", "~The end?"],
+
+        //45 Helping man get away
+        [".....................................>MWMWMWMWMMWMWMWMWMWMWMWMWMWMMWWMMWMWMWMWMWMWMWMWMWMWMWMWMMWMWMWMWMb...............",
+        "...................................MWMWMWMWMMWMWMWMWMWMMWMWM*\"      \"*VMWMMWMWMMMWMWMWMWMWMWMMWMWMWMWMMWM^\\.............",
+        "..................................ZMWMWMWMWMWMWMWMWMWMP**\"              \"*QMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM.\\,...........",
+        ".................................ZMWMWMWMWMWWMMP*                           \"MWMWMWMWMWMWMWMWMWWMWMWMWMWMWB.*...........",
+        ".................................QMWMWMWMWMWMWP                               QMMWMWMWMWMWMWMWMWMWMWMWMMMWB.............",
+        ".................................MWMWMWMWMWMW?                                 \"QMWMWMWMWMWMWMWMWMWMWMWMWW..............",
+        ".................................QMWMWMWMWMWG\'                                   \"QMWMWMWMWMWMWMWMWMWMMWMW..............",
+        "..................................QWMWMWMMWWP                                _,_    \"SMWMWMWMMWMWMWMWMMWM|..............",
+        "..................................|MWMWMWMWMT                        _,,yyyMMMWMMyy,   QMWMWMWMWMWMWMWMWMM..............",
+        "..................................\\MWMWMWMWM;  ,___                /MMWMWP**\"\"      \"   QWMWMWMWMWMWMMWMWMW\\,...........",
+        "....................................MWMWMWMWb dMWMWMWMWMWb        *MWP*j=DDD=)>,        QMWMWMWMWMWMWMWMWMWMB,..........",
+        "....................................Y*MWMWMWbP*\',zDDD=-,_           ,R-=***\"\"            QMWMWMWMWMWMWWMWMWMWM/.........",
+        "......................................MWMWMWM  dDY*DD*--\"                                 \"QMWMWMWMWMWMWMWMMWMB.........",
+        "......................................YMWMWMWb                                              MWMWMWMWMWMWMWMWWM=-........",
+        ".......................................(MWMWMM             /                               MWMW  WMWMW^MWMW**^..........",
+        ".........................................QMWMM             |      __                        MMWM  ZMWMW   MWP*..........",
+        "...~~~~~\"No.sorry.I.confused.you.for.......QMM|            |     /                          MMWP ZMWMP   MWMWb..........",
+        "..........someone.else\".......................QJ                                           ,vvvvv\"*\"    JMWMWL...........",
+            "..............................................Q                  v,                      vvvvvvv       JWMWL\\...........",
+            "...............................................Q            vvvvvvvvvvv               ,vvvvvvvv,      JMMWMWL...........",
+            "................................................ v         vvvv-__-==-vvvvvv        vvvvvvvvvvv MVMVMVMVMML.............",
+            "................................................ vvv    ,vvv,DDDDDDDDDDDDD\' v     vvvvvvvvvvvv, |MWMWMWMWLLL............",
+            ".................................................vvvvv  vv,DDDDDDDDDDDDDD\'  vv  vvvvvvvvvvvvvv  |MWMWMWMWMWLL...........",
+            ".................................................vvvvvv, v  \'DDDDDDDDD\'     vvvvvvvvvvvvvvvvv   |WMMWMWMWMW=-...........",
+            "..................................................vvvvvvvv,                vvvvvvvvvvvvvvvvv    |WMWMWMWMMWL............",
+            "....................................................vvvvvvvv,           vvvvvvvvvvvvvvvvvv      |WMWMWMWMWM==-..........",
+            "......................................................vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv\"       |WMWMWMWMMWMWM=*........",
+            "....................................................../ vvvvvvvvvvvvvvvvvvvvvvvvvv              MMMMMMMMMMMMP...........",
+            "......................................................|     vvvvvvvvvvvvvvvvvv                  MWMWMWMWMWM.............",
+            "......................................................|           \"\"\"\"\"\"                         wMWMWMW--*............."
+
+        ],
+        //46 She doesnt know either
+        ["\"I don't know why he showed up here either\", she answered, \"it's probably just bad luck\""],
 
     ];
 }
