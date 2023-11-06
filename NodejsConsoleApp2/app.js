@@ -342,7 +342,6 @@ function Charge() {
 function render(imageIndex, renderUp) {
     imgIndex = imageIndex;
     console.clear();
-    console.log(imageIndex);
 
     for (let i = 0; i < Stored.Collection[imgIndex].length; i++) { //stored collection is everything in Arrays.js
         let Rendered = Array.from(Stored.Collection[imgIndex]);
