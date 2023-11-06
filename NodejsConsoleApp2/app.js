@@ -1,19 +1,11 @@
 var Stored = require('./Arrays.js'),
     read = require('readline-sync'),
     Arrows = 1,
-    imgIndex = 0,
-    primedArrows = 2;
-
-//camelcase warcrimes were commited here so leave if u cant handle it
+    imgIndex = 0;
 
 const eerstekeuze = 1;
-
-
 console.clear();
-
-
 Start();
-
 read.question();
 
 function SwitchFunctie() {
@@ -27,7 +19,7 @@ function SwitchFunctie() {
                 if (Arrows == 3) {
                     Arrows = 1;
                 }
-                render(imgIndex, Arrows == 1);  //stored collection is everything in Arrays.js
+                render(imgIndex, Arrows == 1);  
                 break;
             case "s":
                 Arrows--;
@@ -41,11 +33,11 @@ function SwitchFunctie() {
                 return Arrows;
                 break;
             default:
-                console.log("W or S");
+                console.log("W or S and Space to confirm");
         }
 
     }
-    console.log("end of while");
+    console.log("debug");
 }
 
 function Start() {
@@ -113,6 +105,24 @@ function Lie() {
     }
 }
 
+function Apologize() {
+    imgIndex = 15
+    SwitchFunctie();
+    imgIndex = 16
+    const result = SwitchFunctie();
+    if (result == eerstekeuze) {
+        Info();
+    } else {
+        Outside();
+    }
+
+}
+
+function LieMore() {
+    imgIndex = 14;              //end
+    SwitchFunctie();
+    Start();
+}
 function SheLies() {
     imgIndex = 17;
     const result = SwitchFunctie();
@@ -129,7 +139,7 @@ function Explained() {
     imgIndex = 16
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
-        Info()
+        Info();
     } else {
         Outside();
     }
@@ -145,7 +155,7 @@ function Info() {
     if (result == eerstekeuze) {
         YouWavedHimExtended();
     } else {
-        Fight();////////////////////////////
+        Fight();
     }
 }
 function YouWavedHimExtended() {
@@ -170,7 +180,7 @@ function NoInfo() {
     if (result == eerstekeuze) {
         YouWavedHim();
     } else {
-        Fight();////////////////////////////
+        Fight();
     }
 }
 
@@ -219,7 +229,8 @@ function ForAWalk() {
     const result = SwitchFunctie();
     if (result == eerstekeuze) {
         imgIndex = 39;
-        SwitchFunctie();                //end
+        SwitchFunctie();            //end
+        Start();                    
     } else {
         HowToHelp();
     }
@@ -232,11 +243,13 @@ function HowToHelp() {
     if (result == eerstekeuze) {
         imgIndex = 43;
         SwitchFunctie();          //end
+        Start();
     } else {
         imgIndex = 41;
         SwitchFunctie();
         imgIndex = 42;             //end
         SwitchFunctie();
+        Start();
     }
 }
 
@@ -252,6 +265,7 @@ function Park() {
     } else {
         imgIndex = 44;
         SwitchFunctie();            //end
+        Start();
     }
 
 }
@@ -262,6 +276,7 @@ function CatGone() {
     SwitchFunctie();
     imgIndex = 34;
     SwitchFunctie();         //end
+    Start();
 }
 function Fight() {
     imgIndex = 47;
@@ -292,6 +307,7 @@ function Table() {
     } else {
         imgIndex = 57
         SwitchFunctie();            //end
+        Start();
     }
 }
 function Punch() {
@@ -309,9 +325,11 @@ function Duck() {
     if (result == eerstekeuze) {
         imgIndex = 53;
         SwitchFunctie();            //end
+        Start();
     } else {
         imgIndex = 54;
         SwitchFunctie();            //end
+        Start();
     }
 }
 function Charge() {
@@ -319,7 +337,6 @@ function Charge() {
     SwitchFunctie();
     imgIndex = 51;
     SwitchFunctie();
-
 }
 
 function render(imageIndex, renderUp) {
@@ -327,7 +344,7 @@ function render(imageIndex, renderUp) {
     console.clear();
     console.log(imageIndex);
 
-    for (let i = 0; i < Stored.Collection[imgIndex].length; i++) {
+    for (let i = 0; i < Stored.Collection[imgIndex].length; i++) { //stored collection is everything in Arrays.js
         let Rendered = Array.from(Stored.Collection[imgIndex]);
         if (renderUp) {
             Rendered[i] = Rendered[i].replace('~~~~~', '>>>>>');
