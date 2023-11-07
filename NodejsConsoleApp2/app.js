@@ -151,7 +151,7 @@ function Info() {
     imgIndex = 20;
     SwitchFunctie();
     imgIndex = 21;
-    SwitchFunctie();
+    const result = SwitchFunctie();
     if (result == eerstekeuze) {
         YouWavedHimExtended();
     } else {
@@ -176,7 +176,7 @@ function NoInfo() {
     imgIndex = 19;
     SwitchFunctie();
     imgIndex = 21;
-    SwitchFunctie();
+    const result = SwitchFunctie();
     if (result == eerstekeuze) {
         YouWavedHim();
     } else {
